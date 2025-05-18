@@ -26,7 +26,133 @@
     <link rel="stylesheet" href="css/slick.css" />
     <!-- style CSS -->
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".counter").counterUp({
+          delay: 10,
+          time: 1000,
+        });
+      });
+    </script>
     <style>
+      .about_section {
+        padding: 100px 0;
+        background-color: #f8f9fa;
+      }
+      .about_text h2 {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 30px;
+        color: #2a2a2a;
+      }
+      .about_text p {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #666666;
+        margin-bottom: 0;
+      }
+      .single_feature {
+        padding: 30px 20px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+      }
+      .single_feature:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      }
+      .single_feature h3 {
+        font-size: 36px;
+        font-weight: 700;
+        color: #9fd69d;
+        margin-bottom: 10px;
+      }
+      .single_feature p {
+        font-size: 14px;
+        margin-bottom: 0;
+        color: #666666;
+      }
+      .about_img img {
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+      /* Trending Items Styles */
+      .trending_items {
+        padding: 80px 0;
+        background: #fff;
+      }
+      .single_product_item {
+        margin-bottom: 30px;
+        background: #fff;
+        border-radius: 15px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+      .single_product_item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      }
+      .single_product_item_thumb {
+        position: relative;
+        overflow: hidden;
+      }
+      .product-image {
+        transition: transform 0.5s ease;
+      }
+      .single_product_item:hover .product-image {
+        transform: scale(1.05);
+      }
+      .product-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      .single_product_item:hover .product-overlay {
+        opacity: 1;
+      }
+      .product-info {
+        padding: 20px;
+      }
+      .product-info h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+      .product-info h3 a {
+        color: #2a2a2a;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      .product-info h3 a:hover {
+        color: #9fd69d;
+      }
+      .price-tag {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .starting-price {
+        color: #666;
+        font-size: 14px;
+      }
+      .amount {
+        color: #9fd69d;
+        font-size: 18px;
+        font-weight: 600;
+      }
       .banner_part {
         width: 100%;
         height: 85vh;
@@ -38,7 +164,7 @@
         top: 0;
         left: 0;
         width: 100%;
-      
+
         background: rgba(0, 0, 0, 0.5);
       }
       .banner_part .banner_text {
@@ -69,6 +195,59 @@
         margin: 0;
         padding: 0;
       }
+      .contact_part {
+        background: #f8f9fa;
+        padding: 80px 0;
+      }
+      .contact_info h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #2a2a2a;
+      }
+      .contact_info p {
+        color: #666;
+        margin-bottom: 30px;
+      }
+      .single_contact {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .single_contact i {
+        font-size: 20px;
+        color: #9fd69d;
+        margin-right: 15px;
+      }
+      .single_contact p {
+        margin: 0;
+        color: #2a2a2a;
+      }
+      .contact_form {
+        background: #fff;
+        padding: 40px;
+        border-radius: 15px;
+
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+      }
+      .contact_form h3 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        color: #2a2a2a;
+      }
+      .contact_form .form-control {
+        border: 1px solid #eee;
+        padding: 10px 15px;
+        margin-bottom: 15px;
+      }
+      .contact_form .form-control:focus {
+        border-color: #9fd69d;
+        box-shadow: none;
+      }
+      @media (max-width: 768px) {
+        .navbar-brand img {
+          width: 70px !important;
+        }
+      }
     </style>
   </head>
 
@@ -80,7 +259,12 @@
           <div class="col-lg-12">
             <nav class="navbar navbar-expand-lg navbar-light">
               <a class="navbar-brand" href="index.html">
-                <img src="img/logo.png" alt="logo" />
+                <img
+                  src="img/bndlogo.png"
+                  width="100px"
+                  alt="#"
+                  style="filter: invert(1)"
+                />
               </a>
               <button
                 class="navbar-toggler"
@@ -105,81 +289,15 @@
                   <li class="nav-item">
                     <a class="nav-link" href="about.html">about</a>
                   </li>
-                  <li class="nav-item dropdown">
-                    <a
-                      class="nav-link dropdown-toggle"
-                      href="blog.html"
-                      id="navbarDropdown_1"
-                      role="button"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      product
-                    </a>
-                    <div
-                      class="dropdown-menu"
-                      aria-labelledby="navbarDropdown_1"
-                    >
-                      <a class="dropdown-item" href="product_list.html">
-                        product list</a
-                      >
-                      <a class="dropdown-item" href="single-product.html"
-                        >product details</a
-                      >
-                    </div>
+                  <li class="nav-item">
+                    <a class="nav-link" href="product_list.html">Product</a>
                   </li>
-                  <li class="nav-item dropdown">
-                    <a
-                      class="nav-link dropdown-toggle"
-                      href="blog.html"
-                      id="navbarDropdown_3"
-                      role="button"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      pages
-                    </a>
-                    <div
-                      class="dropdown-menu"
-                      aria-labelledby="navbarDropdown_2"
-                    >
-                      <a class="dropdown-item" href="login.html"> login </a>
-                      <a class="dropdown-item" href="checkout.html"
-                        >product checkout</a
-                      >
-                      <a class="dropdown-item" href="cart.html"
-                        >shopping cart</a
-                      >
-                      <a class="dropdown-item" href="confirmation.html"
-                        >confirmation</a
-                      >
-                      <a class="dropdown-item" href="elements.html">elements</a>
-                    </div>
+                  <li class="nav-item">
+                    <a class="nav-link" href="login.html">Pages</a>
                   </li>
 
-                  <li class="nav-item dropdown">
-                    <a
-                      class="nav-link dropdown-toggle"
-                      href="blog.html"
-                      id="navbarDropdown_2"
-                      role="button"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      blog
-                    </a>
-                    <div
-                      class="dropdown-menu"
-                      aria-labelledby="navbarDropdown_2"
-                    >
-                      <a class="dropdown-item" href="blog.html"> blog</a>
-                      <a class="dropdown-item" href="single-blog.html"
-                        >Single blog</a
-                      >
-                    </div>
+                  <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Blog</a>
                   </li>
 
                   <li class="nav-item">
@@ -326,7 +444,61 @@
       </div>
     </section>
     <!-- banner part start-->
-
+    <!-- about section start -->
+    <section class="about_section section_padding">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 col-md-6">
+            <div class="about_img">
+              <img src="./img/about_img_1.png" alt="#" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="about_text">
+              <h2>Crafting Comfort <br />Since 1995</h2>
+              <p>
+                At PillowMart, we believe that a perfect pillow is the
+                foundation of a good night's sleep. Our journey began with a
+                simple mission: to create premium quality pillows that combine
+                comfort, durability, and style. Each product is carefully
+                crafted using the finest materials and innovative technology to
+                ensure optimal support and relaxation.
+              </p>
+              <div class="about_features mt-5">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="single_feature text-center mb-4">
+                      <h3><span>25</span>+</h3>
+                      <p>Years of Experience</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="single_feature text-center mb-4">
+                      <h3><span>50</span>K+</h3>
+                      <p>Happy Customers</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="single_feature text-center">
+                      <h3><span>100</span>+</h3>
+                      <p>Product Variants</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="single_feature text-center">
+                      <h3><span>98</span>%</h3>
+                      <p>Customer Satisfaction</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a href="about.html" class="btn_3 mt-5">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about section end -->
     <!-- product list start-->
     <section class="single_product_list">
       <div class="container">
@@ -342,11 +514,14 @@
                       alt="#"
                     />
                     <img
-                    src="img/product_overlay.png" 
-                    alt="#"
-                    class="product_overlay img-fluid"
-                    style="filter: hue-rotate(180deg) saturate(150%) brightness(100%);"
-                  />
+                      src="img/product_overlay.png"
+                      alt="#"
+                      class="product_overlay img-fluid"
+                      style="
+                        filter: hue-rotate(180deg) saturate(150%)
+                          brightness(100%);
+                      "
+                    />
                   </div>
                 </div>
                 <div class="col-lg-5 col-sm-6">
@@ -372,10 +547,13 @@
                       alt="#"
                     />
                     <img
-                      src="img/product_overlay.png" 
+                      src="img/product_overlay.png"
                       alt="#"
                       class="product_overlay img-fluid"
-                      style="filter: hue-rotate(180deg) saturate(150%) brightness(100%);"
+                      style="
+                        filter: hue-rotate(180deg) saturate(150%)
+                          brightness(100%);
+                      "
                     />
                   </div>
                 </div>
@@ -402,10 +580,13 @@
                       alt="#"
                     />
                     <img
-                      src="img/product_overlay.png" 
+                      src="img/product_overlay.png"
                       alt="#"
                       class="product_overlay img-fluid"
-                      style="filter: hue-rotate(180deg) saturate(150%) brightness(100%);"
+                      style="
+                        filter: hue-rotate(180deg) saturate(150%)
+                          brightness(100%);
+                      "
                     />
                   </div>
                 </div>
@@ -434,101 +615,159 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="section_tittle text-center">
-              <h2>Trending Items</h2>
+              <h2>Products</h2>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-lg-4 col-sm-6">
-            <div class="single_product_item">
+            <div class="single_product_item hover-card">
               <div class="single_product_item_thumb">
                 <img
                   src="img/tranding_item/tranding_item_1.png"
                   alt="#"
-                  class="img-fluid"
+                  class="img-fluid product-image"
                 />
+                <div class="product-overlay">
+                  <a href="single-product.html" class="btn_3">View Details</a>
+                </div>
               </div>
-              <h3>
-                <a href="single-product.html"
-                  >Cervical pillow for airplane car office nap pillow</a
-                >
-              </h3>
-              <p>From $5</p>
+              <div class="product-info">
+                <h3>
+                  <a href="single-product.html"
+                    >Cervical pillow for airplane car office nap pillow</a
+                  >
+                </h3>
+                <div class="price-tag">
+                  <span class="starting-price">From</span>
+                  <span class="amount">$5</span>
+                </div>
+              </div>
             </div>
           </div>
           <div class="col-lg-4 col-sm-6">
-            <div class="single_product_item">
-              <img
-                src="img/tranding_item/tranding_item_2.png"
-                alt="#"
-                class="img-fluid"
-              />
-              <h3>
-                <a href="single-product.html"
-                  >Foam filling cotton slow rebound pillows</a
-                >
-              </h3>
-              <p>From $5</p>
+            <div class="single_product_item hover-card">
+              <div class="single_product_item_thumb">
+                <img
+                  src="img/tranding_item/tranding_item_2.png"
+                  alt="#"
+                  class="img-fluid product-image"
+                />
+                <div class="product-overlay">
+                  <a href="single-product.html" class="btn_3">View Details</a>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3>
+                  <a href="single-product.html"
+                    >Foam filling cotton slow rebound pillows</a
+                  >
+                </h3>
+                <div class="price-tag">
+                  <span class="starting-price">From</span>
+                  <span class="amount">$5</span>
+                </div>
+              </div>
             </div>
           </div>
           <div class="col-lg-4 col-sm-6">
-            <div class="single_product_item">
-              <img
-                src="img/tranding_item/tranding_item_3.png"
-                alt="#"
-                class="img-fluid"
-              />
-              <h3>
-                <a href="single-product.html"
-                  >Memory foam filling cotton Slow rebound pillows</a
-                >
-              </h3>
-              <p>From $5</p>
+            <div class="single_product_item hover-card">
+              <div class="single_product_item_thumb">
+                <img
+                  src="img/tranding_item/tranding_item_3.png"
+                  alt="#"
+                  class="img-fluid product-image"
+                />
+                <div class="product-overlay">
+                  <a href="single-product.html" class="btn_3">View Details</a>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3>
+                  <a href="single-product.html"
+                    >Memory foam filling cotton Slow rebound pillows</a
+                  >
+                </h3>
+                <div class="price-tag">
+                  <span class="starting-price">From</span>
+                  <span class="amount">$5</span>
+                </div>
+              </div>
             </div>
           </div>
           <div class="col-lg-4 col-sm-6">
-            <div class="single_product_item">
-              <img
-                src="img/tranding_item/tranding_item_4.png"
-                alt="#"
-                class="img-fluid"
-              />
-              <h3>
-                <a href="single-product.html"
-                  >Cervical pillow for airplane car office nap pillow</a
-                >
-              </h3>
-              <p>From $5</p>
+            <div class="single_product_item hover-card">
+              <div class="single_product_item_thumb">
+                <img
+                  src="img/tranding_item/tranding_item_1.png"
+                  alt="#"
+                  class="img-fluid product-image"
+                />
+                <div class="product-overlay">
+                  <a href="single-product.html" class="btn_3">View Details</a>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3>
+                  <a href="single-product.html"
+                    >Cervical pillow for airplane car office nap pillow</a
+                  >
+                </h3>
+                <div class="price-tag">
+                  <span class="starting-price">From</span>
+                  <span class="amount">$5</span>
+                </div>
+              </div>
             </div>
           </div>
           <div class="col-lg-4 col-sm-6">
-            <div class="single_product_item">
-              <img
-                src="img/tranding_item/tranding_item_5.png"
-                alt="#"
-                class="img-fluid"
-              />
-              <h3>
-                <a href="single-product.html"
-                  >Foam filling cotton slow rebound pillows</a
-                >
-              </h3>
-              <p>From $5</p>
+            <div class="single_product_item hover-card">
+              <div class="single_product_item_thumb">
+                <img
+                  src="img/tranding_item/tranding_item_1.png"
+                  alt="#"
+                  class="img-fluid product-image"
+                />
+                <div class="product-overlay">
+                  <a href="single-product.html" class="btn_3">View Details</a>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3>
+                  <a href="single-product.html"
+                    >Cervical pillow for airplane car office nap pillow</a
+                  >
+                </h3>
+                <div class="price-tag">
+                  <span class="starting-price">From</span>
+                  <span class="amount">$5</span>
+                </div>
+              </div>
             </div>
           </div>
           <div class="col-lg-4 col-sm-6">
-            <div class="single_product_item">
-              <img
-                src="img/tranding_item/tranding_item_6.png"
-                alt="#"
-                class="img-fluid"
-              />
-              <h3>
-                <a href="single-product.html"
-                  >Memory foam filling cotton Slow rebound pillows</a
-                >
-              </h3>
-              <p>From $5</p>
+            <div class="single_product_item hover-card">
+              <div class="single_product_item_thumb">
+                <img
+                  src="img/tranding_item/tranding_item_1.png"
+                  alt="#"
+                  class="img-fluid product-image"
+                />
+                <div class="product-overlay">
+                  <a href="single-product.html" class="btn_3">View Details</a>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3>
+                  <a href="single-product.html"
+                    >Cervical pillow for airplane car office nap pillow</a
+                  >
+                </h3>
+                <div class="price-tag">
+                  <span class="starting-price">From</span>
+                  <span class="amount">$5</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -632,28 +871,312 @@
     </section>
     <!-- feature part end -->
 
-    <!-- subscribe part here -->
-    <section class="subscribe_part section_padding">
+    <!-- blog section start -->
+    <section
+      class="blog_area section_padding"
+      style="background-color: #e9f6e8"
+    >
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+            <div class="section_tittle text-center">
+              <h2>Latest From Our Blog</h2>
+              <p>Discover tips, trends and stories about sleep and comfort</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+            <article class="blog_item" style="background-color: #fff">
+              <div class="blog_item_img">
+                <img
+                  class="card-img rounded-0"
+                  src="img/blog/single_blog_1.png"
+                  alt=""
+                />
+                <a
+                  href="https://medium.com/@bndseekers/discover-the-magic-of-handmade-crafts-lets-talk-creativity-culture-connection-39f70ea84a2e"
+                  class="blog_item_date"
+                >
+                  <h3>15</h3>
+                  <p>Jan</p>
+                </a>
+              </div>
+              <div class="blog_details">
+                <a
+                  class="d-inline-block"
+                  href="https://medium.com/@bndseekers/discover-the-magic-of-handmade-crafts-lets-talk-creativity-culture-connection-39f70ea84a2e"
+                >
+                  <h3>The Perfect Pillow</h3>
+                </a>
+                <p>Learn how to select the right pillow style and needs...</p>
+                <a
+                  href="https://medium.com/@bndseekers/discover-the-magic-of-handmade-crafts-lets-talk-creativity-culture-connection-39f70ea84a2e"
+                  class="btn_3"
+                  >Read More</a
+                >
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <article class="blog_item" style="background-color: #fff">
+              <div class="blog_item_img">
+                <img
+                  class="card-img rounded-0"
+                  src="img/blog/single_blog_2.png"
+                  alt=""
+                />
+                <a
+                  href="https://medium.com/@bndseekers/why-terracotta-pots-are-making-a-comeback-in-indian-homes-d4dee7f727b9"
+                  class="blog_item_date"
+                >
+                  <h3>12</h3>
+                  <p>Feb</p>
+                </a>
+              </div>
+              <div class="blog_details">
+                <a
+                  class="d-inline-block"
+                  href="https://medium.com/@bndseekers/why-terracotta-pots-are-making-a-comeback-in-indian-homes-d4dee7f727b9"
+                >
+                  <h3>The Science of Sleep</h3>
+                </a>
+                <p>
+                  Understanding how quality sleep impacts your health and
+                  wellbeing...
+                </p>
+                <a
+                  href="https://medium.com/@bndseekers/why-terracotta-pots-are-making-a-comeback-in-indian-homes-d4dee7f727b9"
+                  class="btn_3"
+                  >Read More</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- blog section end -->
+
+    <!-- contact us section start -->
+    <section class="contact_part section_padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="contact_info">
+              <h2>Contact Us</h2>
+              <p class="mb-4">
+                We're here to help and answer any questions you might have. We
+                look forward to hearing from you!
+              </p>
+              <div class="contact_details">
+                <div class="single_contact">
+                  <i class="ti-location-pin"></i>
+                  <p>123 Pillow Street, Sleep City</p>
+                </div>
+                <div class="single_contact">
+                  <i class="ti-email"></i>
+                  <p>info@pillowmart.com</p>
+                </div>
+                <div class="single_contact">
+                  <i class="ti-mobile"></i>
+                  <p>+1 234 567 890</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="contact_form">
+              <h3>Send us a message</h3>
+              <form>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Your Email"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <textarea
+                    class="form-control"
+                    rows="5"
+                    placeholder="Your Message"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn_1">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact us section end -->
+
+    <!-- FAQ Section Start -->
+    <section class="faq_section section_padding">
+      <style>
+        .faq_section {
+          background: #f8f9fa;
+          padding: 80px 0;
+        }
+        .section_title {
+          color: #2a2a2a;
+          margin-bottom: 50px;
+        }
+        .card {
+          border: none;
+          margin-bottom: 15px;
+          border-radius: 10px;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+          transition: all 0.3s ease;
+        }
+        .card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        .card-header {
+          background: white;
+          border: none;
+          padding: 20px;
+        }
+        .btn-link {
+          color: #2a2a2a;
+          text-decoration: none;
+          width: 100%;
+          text-align: left;
+          font-weight: 600;
+          position: relative;
+        }
+        .btn-link::after {
+          content: "\f078";
+          font-family: "Font Awesome 5 Free";
+          position: absolute;
+          right: 0;
+          transition: transform 0.3s ease;
+        }
+        .btn-link[aria-expanded="true"]::after {
+          transform: rotate(180deg);
+        }
+        .card-body {
+          padding: 20px;
+          color: #666;
+          line-height: 1.8;
+        }
+        @media (max-width: 767px) {
+          .faq_section {
+            padding: 50px 0;
+          }
+          .section_title {
+            font-size: 28px;
+          }
+        }
+      </style>
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8">
-            <div class="subscribe_part_content">
-              <h2>Get promotions & updates!</h2>
-              <p>
-                Seamlessly empower fully researched growth strategies and
-                interoperable internal or “organic” sources credibly innovate
-                granular internal .
-              </p>
-              <div class="subscribe_form">
-                <input type="email" placeholder="Enter your mail" />
-                <a href="#" class="btn_1">Subscribe</a>
+            <h2 class="section_title text-center mb-5">
+              Frequently Asked Questions
+            </h2>
+            <div class="accordion" id="faqAccordion">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-link"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      What materials are used in your pillows?
+                    </button>
+                  </h2>
+                </div>
+                <div
+                  id="collapseOne"
+                  class="collapse show"
+                  aria-labelledby="headingOne"
+                  data-parent="#faqAccordion"
+                >
+                  <div class="card-body">
+                    Our pillows are made from premium memory foam,
+                    hypoallergenic fibers, and breathable fabrics for maximum
+                    comfort and durability.
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      How do I choose the right pillow?
+                    </button>
+                  </h2>
+                </div>
+                <div
+                  id="collapseTwo"
+                  class="collapse"
+                  aria-labelledby="headingTwo"
+                  data-parent="#faqAccordion"
+                >
+                  <div class="card-body">
+                    Consider your sleeping position and personal preferences.
+                    Our sleep experts can help you find the perfect match.
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      What is your return policy?
+                    </button>
+                  </h2>
+                </div>
+                <div
+                  id="collapseThree"
+                  class="collapse"
+                  aria-labelledby="headingThree"
+                  data-parent="#faqAccordion"
+                >
+                  <div class="card-body">
+                    We offer a 30-day satisfaction guarantee. If you're not
+                    completely happy, you can return your pillow for a full
+                    refund.
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- subscribe part end -->
+    <!-- FAQ Section End -->
 
     <!--::footer_part start::-->
     <footer class="footer_part">
@@ -663,7 +1186,13 @@
             <div class="col-lg-8">
               <div class="footer_menu">
                 <div class="footer_logo">
-                  <a href="index.html"><img src="img/logo.png" alt="#" /></a>
+                  <a href="index.html"
+                    ><img
+                      src="img/bndlogo.png"
+                      width="100px"
+                      alt="#"
+                      style="filter: invert(1)"
+                  /></a>
                 </div>
                 <div class="footer_menu_item">
                   <a href="index.html">Home</a>
@@ -700,7 +1229,9 @@
                   </script>
                   All rights reserved | This template is made with
                   <i class="ti-heart" aria-hidden="true"></i> by
-                  <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                  <a href="https://colorlib.com" target="_blank"
+                    >Deepika's Akka</a
+                  >
                   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 </p>
                 <div class="copyright_link">
