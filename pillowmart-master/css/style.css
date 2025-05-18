@@ -31,6 +31,76 @@ body {
 .message_submit_form:focus {
   outline: none;
 }
+/* Enhanced Mobile Navigation Styles */
+@media (max-width: 768px) {
+  .navbar-brand img {
+    width: 50px !important;
+    margin-bottom: 0;
+  }
+  
+  .navbar-toggler {
+    padding: 0.25rem 0.5rem;
+    margin-right: 0.5rem;
+    border: none;
+  }
+  
+  .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  .menu_icon i {
+    font-size: 1.5rem;
+    color: #2a2a2a;
+  }
+  
+  .navbar-collapse {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 0.5rem;
+  }
+  
+  .navbar-nav {
+    text-align: center;
+  }
+  
+  .nav-item {
+    margin: 0.5rem 0;
+  }
+  
+  .nav-link {
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    background: #f8f9fa;
+    border-radius: 6px;
+  }
+  
+  /* Adjust header height for mobile */
+  .main_menu .navbar{
+    padding: 30px 0;
+  }
+  
+  /* Ensure search box is properly styled on mobile */
+  .search_input {
+    top: 80px;
+    height: auto;
+  }
+  
+  .search_input .form-control {
+    height: 45px;
+  }
+  
+  /* Add smooth scrolling for anchor links */
+  * {
+    scroll-behavior: smooth;
+  }
+}
 
 /* line 13, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_common.scss */
 input:hover,
@@ -53,6 +123,9 @@ input:focus {
   .section_padding {
     padding: 100px 0px;
   }
+  .main_menu .navbar{
+    padding: 30px 0;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -66,6 +139,9 @@ input:focus {
   /* line 20, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_common.scss */
   .section_padding {
     padding: 70px 0px;
+  }
+  .main_menu .navbar{
+    padding: 30px 0;
   }
 }
 
@@ -2182,7 +2258,7 @@ ul {
 
 /* line 7, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_menu.scss */
 .main_menu .navbar {
-  padding: 0px;
+  padding: 20px;
 }
 
 /* line 12, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_menu.scss */
@@ -2391,6 +2467,7 @@ ul {
     left: 0;
     top: 50px;
     width: 100%;
+   
     background-color: #fff;
     text-align: center !important;
   }

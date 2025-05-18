@@ -38,7 +38,7 @@
       });
     </script>
     <style>
-      *{
+      * {
         scroll-behavior: smooth;
       }
       .about_section {
@@ -92,7 +92,7 @@
       .single_product_item {
         margin-bottom: 30px;
         background: #fff;
-        
+
         border-radius: 15px;
         overflow: hidden;
         transition: all 0.3s ease;
@@ -249,8 +249,44 @@
       }
       @media (max-width: 768px) {
         .navbar-brand img {
-          width: 40px !important;
-          margin-bottom: 10px
+          width: 50px !important;
+          margin-bottom: 0;
+        }
+        .navbar-toggler {
+          padding: 0.25rem 0.5rem;
+          margin-right: 0.5rem;
+          border: none;
+        }
+        .navbar-toggler:focus {
+          outline: none;
+          box-shadow: none;
+        }
+        .menu_icon i {
+          font-size: 1.5rem;
+          color: #2a2a2a;
+        }
+       
+        .navbar-collapse {
+          background: white;
+          padding:1rem;
+          border-radius: 8px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          margin-top: 0.5rem;
+        }
+        .navbar-nav {
+          text-align: center;
+        }
+        .nav-item {
+          margin: 0.5rem 0;
+        }
+        .nav-link {
+          padding: 0.5rem 1rem;
+          font-size: 1.1rem;
+          transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+          background: #f8f9fa;
+          border-radius: 6px;
         }
       }
     </style>
@@ -264,12 +300,7 @@
           <div class="col-lg-12">
             <nav class="navbar navbar-expand-lg navbar-light">
               <a class="navbar-brand" href="index.html">
-                <img
-                  src="img/bndlogo.png"
-                  width="80px"
-                  alt="#"
-                  
-                />
+                <img src="img/bndlogo.png" width="80px" alt="#" />
               </a>
               <button
                 class="navbar-toggler"
@@ -297,30 +328,19 @@
                   <li class="nav-item">
                     <a class="nav-link" href="product_list.html">Product</a>
                   </li>
-                  <!-- <li class="nav-item">
-                    <a class="nav-link" href="login.html">Pages</a>
-                  </li> -->
-
                   <li class="nav-item">
                     <a class="nav-link" href="#testimonial">Testimonials</a>
                   </li>
-
                   <li class="nav-item">
                     <a class="nav-link" href="#blog">Blog</a>
                   </li>
-
                   <li class="nav-item">
                     <a class="nav-link" href="#contact">Contact</a>
                   </li>
                 </ul>
               </div>
               <div class="hearer_icon d-flex align-items-center">
-                <!-- <a id="search_1" href="javascript:void(0)"
-                  ><i class="ti-search"></i
-                ></a>
-                <a href="cart.html">
-                  <i class="flaticon-shopping-cart-black-shape"></i>
-                </a> -->
+                <!-- Icons removed as per current design -->
               </div>
             </nav>
           </div>
@@ -383,9 +403,13 @@
                     <div class="banner_text_iner text-white">
                       <h1>Handcrafted Terracotta</h1>
                       <p>
-                        Discover the timeless beauty of traditional pottery, crafted by skilled artisans using techniques passed down through generations
+                        Discover the timeless beauty of traditional pottery,
+                        crafted by skilled artisans using techniques passed down
+                        through generations
                       </p>
-                      <a href="product_list.html" class="btn_1">Explore Collection</a>
+                      <a href="product_list.html" class="btn_1"
+                        >Explore Collection</a
+                      >
                     </div>
                   </div>
                 </div>
@@ -395,7 +419,11 @@
           <div
             class="carousel-item"
             style="
-              background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('img/bg1.jpg');
+              background-image: linear-gradient(
+                  rgba(0, 0, 0, 0.5),
+                  rgba(0, 0, 0, 0.7)
+                ),
+                url('img/bg1.jpg');
               background-size: cover;
               background-position: center;
               height: 85vh;
@@ -410,9 +438,13 @@
                     <div class="banner_text_iner text-white">
                       <h1>Sustainable Craftsmanship</h1>
                       <p>
-                        Each piece tells a story of earth-friendly materials, traditional techniques, and the skilled hands that shape them
+                        Each piece tells a story of earth-friendly materials,
+                        traditional techniques, and the skilled hands that shape
+                        them
                       </p>
-                      <a href="product_list.html" class="btn_1">Shop Sustainably</a>
+                      <a href="product_list.html" class="btn_1"
+                        >Shop Sustainably</a
+                      >
                     </div>
                   </div>
                 </div>
@@ -422,7 +454,11 @@
           <div
             class="carousel-item"
             style="
-              background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('img/bg2.jpg');
+              background-image: linear-gradient(
+                  rgba(0, 0, 0, 0.5),
+                  rgba(0, 0, 0, 0.7)
+                ),
+                url('img/bg2.jpg');
               background-size: cover;
               background-position: center;
               height: 85vh;
@@ -437,7 +473,9 @@
                     <div class="banner_text_iner text-white">
                       <h1>Artisan Partnerships</h1>
                       <p>
-                        Supporting traditional craftspeople and their communities through fair trade practices and cultural preservation
+                        Supporting traditional craftspeople and their
+                        communities through fair trade practices and cultural
+                        preservation
                       </p>
                       <a href="about.html" class="btn_1">Our Story</a>
                     </div>
@@ -513,8 +551,11 @@
 
     <!-- about section end -->
     <!-- product list start-->
-    <section class="single_product_list" id="
-    singleproduct">
+    <section
+      class="single_product_list"
+      id="
+    singleproduct"
+    >
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
@@ -542,9 +583,10 @@
                   <div class="single_product_content">
                     <!-- <h5>Starting From 99</h5> -->
                     <h2>
-                      <a href="single-product.html">Handcrafted Terracotta Tumblers – Earthy Elegance in Every Sip.
-</a
-                      >
+                      <a href="single-product.html"
+                        >Handcrafted Terracotta Tumblers – Earthy Elegance in
+                        Every Sip.
+                      </a>
                     </h2>
                     <a href="product_list.html" class="btn_3">Explore Now</a>
                   </div>
@@ -576,7 +618,8 @@
                     <!-- <h5>Started from $10</h5> -->
                     <h2>
                       <a href="single-product.html"
-                        >Timeless Terracotta – Artisanal Elegance, Naturally Crafted</a
+                        >Timeless Terracotta – Artisanal Elegance, Naturally
+                        Crafted</a
                       >
                     </h2>
                     <a href="product_list.html" class="btn_3">Explore Now</a>
@@ -609,7 +652,8 @@
                     <!-- <h5>Started from $10</h5> -->
                     <h2>
                       <a href="single-product.html"
-                        >Handcrafted Joy – Earthbound Game, Inspired by Nature</a
+                        >Handcrafted Joy – Earthbound Game, Inspired by
+                        Nature</a
                       >
                     </h2>
                     <a href="product_list.html" class="btn_3">Explore Now</a>
@@ -648,9 +692,7 @@
               </div>
               <div class="product-info">
                 <h3>
-                  <a href="single-product.html"
-                    >The Earthbound Game</a
-                  >
+                  <a href="single-product.html">The Earthbound Game</a>
                 </h3>
                 <div class="price-tag">
                   <span class="starting-price">Rs.</span>
@@ -673,9 +715,7 @@
               </div>
               <div class="product-info">
                 <h3>
-                  <a href="single-product.html"
-                    >The Gentle Earth Fan</a
-                  >
+                  <a href="single-product.html">The Gentle Earth Fan</a>
                 </h3>
                 <div class="price-tag">
                   <span class="starting-price">Rs.</span>
@@ -698,9 +738,7 @@
               </div>
               <div class="product-info">
                 <h3>
-                  <a href="single-product.html"
-                    > The Earth Rug</a
-                  >
+                  <a href="single-product.html"> The Earth Rug</a>
                 </h3>
                 <div class="price-tag">
                   <span class="starting-price">Rs</span>
@@ -723,9 +761,7 @@
               </div>
               <div class="product-info">
                 <h3>
-                  <a href="single-product.html"
-                    >Gentle Neem Teether Set</a
-                  >
+                  <a href="single-product.html">Gentle Neem Teether Set</a>
                 </h3>
                 <div class="price-tag">
                   <span class="starting-price">Rs</span>
@@ -748,9 +784,7 @@
               </div>
               <div class="product-info">
                 <h3>
-                  <a href="single-product.html"
-                    >The Enduring Shirt</a
-                  >
+                  <a href="single-product.html">The Enduring Shirt</a>
                 </h3>
                 <div class="price-tag">
                   <span class="starting-price">Rs.</span>
@@ -773,9 +807,7 @@
               </div>
               <div class="product-info">
                 <h3>
-                  <a href="single-product.html"
-                    >The Earth Traditional Set</a
-                  >
+                  <a href="single-product.html">The Earth Traditional Set</a>
                 </h3>
                 <div class="price-tag">
                   <span class="starting-price">Rs.</span>
@@ -800,7 +832,10 @@
                   <img src="img/client.png" alt="Artisan testimonial" />
                 </div>
                 <p>
-                  "Working with BND Crafters has transformed my pottery business. Their commitment to sustainable practices and fair trade has helped me reach customers who truly value traditional craftsmanship and the stories behind each piece."
+                  "Working with BND Crafters has transformed my pottery
+                  business. Their commitment to sustainable practices and fair
+                  trade has helped me reach customers who truly value
+                  traditional craftsmanship and the stories behind each piece."
                 </p>
                 <h5>- Rajesh Kumar, Master Potter</h5>
               </div>
@@ -809,7 +844,10 @@
                   <img src="img/client_1.png" alt="Customer testimonial" />
                 </div>
                 <p>
-                  "The handcrafted terracotta pieces I purchased from BND Crafters aren't just beautiful home decor - they connect me to ancient traditions and sustainable living. Each item tells a story of skilled hands and earth-friendly practices."
+                  "The handcrafted terracotta pieces I purchased from BND
+                  Crafters aren't just beautiful home decor - they connect me to
+                  ancient traditions and sustainable living. Each item tells a
+                  story of skilled hands and earth-friendly practices."
                 </p>
                 <h5>- Priya Sharma, Loyal Customer</h5>
               </div>
@@ -818,7 +856,11 @@
                   <img src="img/client_2.png" alt="Partner testimonial" />
                 </div>
                 <p>
-                  "As a sustainability advocate, I'm impressed by BND Crafters' dedication to preserving traditional craft techniques while promoting eco-friendly materials. Their artisan network creates exceptional products that honor both culture and environment."
+                  "As a sustainability advocate, I'm impressed by BND Crafters'
+                  dedication to preserving traditional craft techniques while
+                  promoting eco-friendly materials. Their artisan network
+                  creates exceptional products that honor both culture and
+                  environment."
                 </p>
                 <h5>- Arun Mehta, Environmental Consultant</h5>
               </div>
@@ -835,15 +877,15 @@
         <div class="row justify-content-between">
           <div class="col-lg-6">
             <div class="feature_part_tittle">
-              <h3>
-                Celebrating the Artistry of BND Crafters
-              </h3>
+              <h3>Celebrating the Artistry of BND Crafters</h3>
             </div>
           </div>
           <div class="col-lg-5">
             <div class="feature_part_content">
               <p>
-                Discover the passion and dedication behind each handcrafted piece. Our artists blend tradition with innovation to create unique treasures that tell a story.
+                Discover the passion and dedication behind each handcrafted
+                piece. Our artists blend tradition with innovation to create
+                unique treasures that tell a story.
               </p>
             </div>
           </div>
@@ -880,7 +922,7 @@
 
     <!-- blog section start -->
     <section
-    id="blog"
+      id="blog"
       class="blog_area section_padding"
       style="background-color: #e9f6e8"
     >
@@ -924,7 +966,10 @@
                     & Connection
                   </h3>
                 </a>
-                <p>Discover the ancient techniques and cultural significance behind traditional handicrafts...</p>
+                <p>
+                  Discover the ancient techniques and cultural significance
+                  behind traditional handicrafts...
+                </p>
                 <a
                   href="https://medium.com/@bndseekers/discover-the-magic-of-handmade-crafts-lets-talk-creativity-culture-connection-39f70ea84a2e"
                   class="btn_3"
@@ -960,7 +1005,10 @@
                     Why Terracotta Pots Are Making a Comeback in Indian Homes
                   </h3>
                 </a>
-                <p>Explore the timeless art of pottery: from clay selection to firing techniques that transform earth into art...</p>
+                <p>
+                  Explore the timeless art of pottery: from clay selection to
+                  firing techniques that transform earth into art...
+                </p>
 
                 <a
                   href="https://medium.com/@bndseekers/why-terracotta-pots-are-making-a-comeback-in-indian-homes-d4dee7f727b9"
@@ -1031,9 +1079,13 @@
               <div class="social_contact mt-5">
                 <h5>Follow Us</h5>
                 <div class="social_icons mt-3">
-                  <a href="https://www.facebook.com/share/p/19oi8RzL5Z/"><i class="fab fa-facebook-f"></i></a>
-                 <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
-                  <a href="https://www.instagram.com/bnd_crafters"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.facebook.com/share/p/19oi8RzL5Z/"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
+                  <a href="https://www.instagram.com/bnd_crafters"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
                   <!-- <a href="#"><i class="fab fa-linkedin-in"></i></a> -->
                 </div>
               </div>
@@ -1186,7 +1238,13 @@
                   data-parent="#faqAccordion"
                 >
                   <div class="card-body">
-                    Our handicrafts embody sustainability at every stage. We meticulously source natural materials that are responsibly harvested, work with traditional artisans who use eco-friendly production methods, and create durable products designed to be cherished for generations, not discarded. Unlike mass-produced items, our creations have minimal environmental impact and support a circular economy.
+                    Our handicrafts embody sustainability at every stage. We
+                    meticulously source natural materials that are responsibly
+                    harvested, work with traditional artisans who use
+                    eco-friendly production methods, and create durable products
+                    designed to be cherished for generations, not discarded.
+                    Unlike mass-produced items, our creations have minimal
+                    environmental impact and support a circular economy.
                   </div>
                 </div>
               </div>
@@ -1212,7 +1270,14 @@
                   data-parent="#faqAccordion"
                 >
                   <div class="card-body">
-                    We collaborate directly with skilled artisans, celebrating their heritage techniques while ensuring fair livelihoods. Our partnerships are built on respect, fair compensation, and mutual growth. We provide artisans with sustainable materials, design guidance when needed, and a global platform to showcase their craft, while they bring generations of expertise and authentic handcrafting methods to each piece.
+                    We collaborate directly with skilled artisans, celebrating
+                    their heritage techniques while ensuring fair livelihoods.
+                    Our partnerships are built on respect, fair compensation,
+                    and mutual growth. We provide artisans with sustainable
+                    materials, design guidance when needed, and a global
+                    platform to showcase their craft, while they bring
+                    generations of expertise and authentic handcrafting methods
+                    to each piece.
                   </div>
                 </div>
               </div>
@@ -1238,7 +1303,14 @@
                   data-parent="#faqAccordion"
                 >
                   <div class="card-body">
-                    The Earth Ox symbolizes our brand's core values. More than just strength, it represents our deep roots in nature, the honest work of traditional artisans, and our enduring connection to the land that provides our materials. Like the ox patiently working the soil, we build our brand with care, integrity, and respect for the environment. This emblem reminds us of our commitment to sustainable creation and honoring traditional craftsmanship.
+                    The Earth Ox symbolizes our brand's core values. More than
+                    just strength, it represents our deep roots in nature, the
+                    honest work of traditional artisans, and our enduring
+                    connection to the land that provides our materials. Like the
+                    ox patiently working the soil, we build our brand with care,
+                    integrity, and respect for the environment. This emblem
+                    reminds us of our commitment to sustainable creation and
+                    honoring traditional craftsmanship.
                   </div>
                 </div>
               </div>
@@ -1264,7 +1336,14 @@
                   data-parent="#faqAccordion"
                 >
                   <div class="card-body">
-                    Crafters began as a college project at NSB Academy, not in a grand boardroom. What started as a simple idea – exploring the beauty of handmade craft and handcrafted artifacts – quickly grew into a profound commitment to sustainable creation. Our journey has been organic, driven by passion and purpose, evolving from an academic exploration into a mission to connect people with authentic, earth-friendly handicrafts while supporting traditional artisans.
+                    Crafters began as a college project at NSB Academy, not in a
+                    grand boardroom. What started as a simple idea – exploring
+                    the beauty of handmade craft and handcrafted artifacts –
+                    quickly grew into a profound commitment to sustainable
+                    creation. Our journey has been organic, driven by passion
+                    and purpose, evolving from an academic exploration into a
+                    mission to connect people with authentic, earth-friendly
+                    handicrafts while supporting traditional artisans.
                   </div>
                 </div>
               </div>
@@ -1284,18 +1363,14 @@
               <div class="footer_menu">
                 <div class="footer_logo">
                   <a href="index.html"
-                    ><img
-                      src="img/bndlogo.png"
-                      width="100px"
-                      alt="#"
-                     
+                    ><img src="img/bndlogo.png" width="100px" alt="#"
                   /></a>
                 </div>
                 <div class="footer_menu_item">
                   <a href="#">Home</a>
                   <a href="#about">About</a>
                   <a href="product_list.html">Products</a>
-                 
+
                   <a href="#blog">Blog</a>
                   <a href="#contact">Contact</a>
                 </div>
@@ -1303,8 +1378,12 @@
             </div>
             <div class="col-lg-4">
               <div class="social_icon">
-                <a href="https://www.facebook.com/share/p/19oi8RzL5Z/"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/bnd_crafters"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/share/p/19oi8RzL5Z/"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="https://www.instagram.com/bnd_crafters"
+                  ><i class="fab fa-instagram"></i
+                ></a>
                 <!-- <a href="#"><i class="fab fa-google-plus-g"></i></a>
                 <a href="#"><i class="fab fa-linkedin-in"></i></a> -->
               </div>
@@ -1328,7 +1407,6 @@
                   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 </p>
                 <div class="copyright_link">
-                  
                   <a href="#">FAQ</a>
                 </div>
               </div>
