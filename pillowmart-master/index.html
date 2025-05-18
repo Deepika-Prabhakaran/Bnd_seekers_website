@@ -304,7 +304,7 @@
                     <a class="nav-link" href="contact.html">Contact</a>
                   </li>
                 </ul>
-              </div>
+              </div> 
               <div class="hearer_icon d-flex align-items-center">
                 <a id="search_1" href="javascript:void(0)"
                   ><i class="ti-search"></i
@@ -961,65 +961,121 @@
     <!-- contact us section start -->
     <section class="contact_part section_padding">
       <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 text-center">
+            <div class="section_tittle">
+              <h2>Get In Touch</h2>
+              <p>We'd love to hear from you. Reach out and let us know how we can help.</p>
+            </div>
+          </div>
+        </div>
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-lg-5">
             <div class="contact_info">
-              <h2>Contact Us</h2>
-              <p class="mb-4">
-                We're here to help and answer any questions you might have. We
-                look forward to hearing from you!
-              </p>
+              <div class="contact_info_item mb-5">
+                <h3 class="mb-4">Contact Information</h3>
+                <p class="mb-4">
+                  We're here to help and answer any questions you might have. We
+                  look forward to hearing from you!
+                </p>
+              </div>
               <div class="contact_details">
-                <div class="single_contact">
-                  <i class="ti-location-pin"></i>
-                  <p>123 Pillow Street, Sleep City</p>
+                <div class="single_contact mb-4">
+                  <div class="contact_icon">
+                    <i class="ti-location-pin"></i>
+                  </div>
+                  <div class="contact_text">
+                    <h5>Our Location</h5>
+                    <p>123 Pillow Street, Sleep City</p>
+                  </div>
                 </div>
-                <div class="single_contact">
-                  <i class="ti-email"></i>
-                  <p>info@pillowmart.com</p>
+                <div class="single_contact mb-4">
+                  <div class="contact_icon">
+                    <i class="ti-email"></i>
+                  </div>
+                  <div class="contact_text">
+                    <h5>Email Address</h5>
+                    <p>info@pillowmart.com</p>
+                  </div>
                 </div>
-                <div class="single_contact">
-                  <i class="ti-mobile"></i>
-                  <p>+1 234 567 890</p>
+                <div class="single_contact mb-4">
+                  <div class="contact_icon">
+                    <i class="ti-mobile"></i>
+                  </div>
+                  <div class="contact_text">
+                    <h5>Phone Number</h5>
+                    <p>+1 234 567 890</p>
+                  </div>
+                </div>
+              </div>
+              <div class="social_contact mt-5">
+                <h5>Follow Us</h5>
+                <div class="social_icons mt-3">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-7">
             <div class="contact_form">
-              <h3>Send us a message</h3>
-              <form>
+              <h3 class="mb-4">Send us a message</h3>
+              <form id="contactForm">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        placeholder="Your Name"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        placeholder="Your Email"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
                 <div class="form-group">
                   <input
                     type="text"
                     class="form-control"
-                    placeholder="Your Name"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <input
-                    type="email"
-                    class="form-control"
-                    placeholder="Your Email"
+                    id="subject"
+                    placeholder="Subject"
                     required
                   />
                 </div>
                 <div class="form-group">
                   <textarea
                     class="form-control"
+                    id="message"
                     rows="5"
                     placeholder="Your Message"
                     required
                   ></textarea>
                 </div>
-                <button type="submit" class="btn_1">Send Message</button>
+                <button type="submit" class="btn_1">
+                  <span>Send Message</span>
+                  <i class="ti-arrow-right ml-2"></i>
+                </button>
               </form>
             </div>
           </div>
         </div>
       </div>
     </section>
+    
     <!-- contact us section end -->
 
     <!-- FAQ Section Start -->

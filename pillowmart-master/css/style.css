@@ -4866,6 +4866,169 @@ input:focus {
 .review_box .contact_form {
   margin-top: 15px;
 }
+/* Enhanced Contact Section Styles */
+.contact_part {
+  background-color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact_part::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: rgba(159, 214, 157, 0.1);
+  z-index: 0;
+}
+
+.contact_part::after {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: rgba(159, 214, 157, 0.1);
+  z-index: 0;
+}
+
+.contact_info {
+  padding: 30px;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.contact_form {
+  background: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.contact_form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.contact_form h3 {
+  color: #2a2a2a;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.contact_form h3:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #9fd69d;
+}
+
+.single_contact {
+  display: flex;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+}
+
+.single_contact:hover {
+  transform: translateX(5px);
+}
+
+
+
+.contact_icon i {
+  color: rgb(31, 171, 29);
+  font-size: 18px;
+}
+
+.contact_text h5 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #2a2a2a;
+}
+
+.contact_text p {
+  margin: 0;
+  color: #666;
+}
+
+.form-control {
+  height: 50px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #9fd69d;
+  box-shadow: 0 0 0 0.2rem rgba(159, 214, 157, 0.25);
+}
+
+textarea.form-control {
+  height: auto;
+}
+
+.btn_1 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 30px;
+  background: #9fd69d;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn_1:hover {
+  background: #8bc389;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(159, 214, 157, 0.4);
+}
+
+.social_icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social_icons a {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.social_icons a:hover {
+  background: #9fd69d;
+  color: white;
+  transform: translateY(-3px);
+}
+
 
 /* End Single Product Area css
 ============================================================================================ */
