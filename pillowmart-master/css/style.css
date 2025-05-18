@@ -58,6 +58,7 @@ body {
     background: white;
     padding: 1rem;
     border-radius: 8px;
+  
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin-top: 0.5rem;
   }
@@ -2467,7 +2468,7 @@ ul {
     left: 0;
     top: 50px;
     width: 100%;
-   
+    
     background-color: #fff;
     text-align: center !important;
   }
